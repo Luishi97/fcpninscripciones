@@ -19,14 +19,16 @@ app.use(fileUpload())
 
 // routers
 app.use(express.static(path.join(baseDirName, 'public', 'LandingPage')))
-app.get('/register', function (req, res) {
+app.get('/register', function (_, res) {
   res.sendFile(path.join(baseDirName, 'public', 'Form', 'index.html'))
 })
+
 app.use(express.static(path.join(baseDirName, 'public', 'Form')))
 app.use('/public/uploads', express.static(path.join(baseDirName, 'public', 'uploads')))
 
 app.use('/public', express.static(path.join(baseDirName + '/public')))
 app.use('/api', fileRouter)
+app.use('*', (_, res) => res.redirect('/'))
 crudGeneric(app)
 
 module.exports = app
