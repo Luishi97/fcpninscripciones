@@ -23,6 +23,7 @@ router.get('/file/:path', (req, res) => {
 })
 
 router.post('/upload', (req, res) => {
+  console.log('req.files', req.files)
   const file = req.files.file
 
   const fileType = file.mimetype.split('/')[1]
