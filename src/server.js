@@ -19,7 +19,10 @@ app.use(fileUpload())
 
 // routers
 app.use(express.static(path.join(baseDirName, 'public', 'LandingPage')))
-app.use('/register', express.static(path.join(baseDirName, 'public', 'Form')))
+app.get('/register', function (req, res) {
+  res.sendFile(path.join(baseDirName, 'public', 'Form', 'index.html'))
+})
+app.use(express.static(path.join(baseDirName, 'public', 'Form')))
 app.use('/public/uploads', express.static(path.join(baseDirName, 'public', 'uploads')))
 
 app.use('/public', express.static(path.join(baseDirName + '/public')))
