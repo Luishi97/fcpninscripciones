@@ -26,7 +26,6 @@ app.get('/register', function (_, res) {
   res.sendFile(path.join(baseDirName, 'public', 'Form', 'index.html'))
 })
 app.use(express.static(path.join(baseDirName, 'public', 'Form')))
-
 app.get('/register/admin', function (_, res) {
   res.sendFile(path.join(baseDirName, 'public', 'Admins', 'index.html'))
 })
