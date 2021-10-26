@@ -382,17 +382,27 @@ section {
 .caption h3 a {
   color: #fff;
 }
+.caption h2 {
+  color: #fff;
+}
 .caption h3 a:hover {
   color: #ff3;
 }
 
 .home-slider .item-first {
-  background-image: url(../images/slider-image1.jpg);
+  background: rgba(0, 0, 0, 0.3);
+  background-image: url(../images/frontis.jpg);
+  background-blend-mode: multiply;
   background-position: center;
+  background-size: cover;
 }
 
 .home-slider .item-second {
-  background-image: url(../images/slider-image2.jpg);
+  background: rgba(0, 0, 0, 0.3);
+  background-image: url(../images/caminando.jpg);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
 }
 
 .home-slider .item-third {
