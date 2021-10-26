@@ -22,19 +22,15 @@ crudGeneric(app)
 app.use('/api', fileRouter)
 
 app.use(express.static(path.join(baseDirName, 'public', 'LandingPage')))
-// app.get('/register', function (_, res) {
-//   res.sendFile(path.join(baseDirName, 'public', 'Form', 'index.html'))
-// })
-// app.use(express.static(path.join(baseDirName, 'public', 'Form')))
-// app.get('/register/admin', function (_, res) {
-//   res.sendFile(path.join(baseDirName, 'public', 'Admin', 'index.html'))
-// })
-// app.use(express.static(path.join(baseDirName, 'public', 'Admin')))
+app.get('/register', function (_, res) {
+  res.sendFile(path.join(baseDirName, 'public', 'Form', 'index.html'))
+})
+app.use(express.static(path.join(baseDirName, 'public', 'Form')))
 
-// app.get('/register/admin', function (_, res) {
-//   res.sendFile(path.join(baseDirName, 'public', 'Admins', 'index.html'))
-// })
-// app.use(express.static(path.join(baseDirName, 'public', 'Admins')))
+app.get('/register/admin', function (_, res) {
+  res.sendFile(path.join(baseDirName, 'public', 'Admins', 'index.html'))
+})
+app.use(express.static(path.join(baseDirName, 'public', 'Admins')))
 
 app.use('/public/uploads', express.static(path.join(baseDirName, 'public', 'uploads')))
 
