@@ -539,6 +539,7 @@ section {
   position: absolute;
   bottom: 0;
   padding: 20px 25px;
+  text-align: center;
 }
 
 .courses-date span,
@@ -548,6 +549,11 @@ section {
   font-weight: bold;
 }
 
+.courses-date h2 {
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 10px;
+}
 .courses-date span {
   color: #ffffff;
   display: inline-block;
